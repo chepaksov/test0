@@ -29,7 +29,6 @@ public class SomeServlet extends HttpServlet {
         req.setAttribute("users", users);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
-
     }
 }
 
