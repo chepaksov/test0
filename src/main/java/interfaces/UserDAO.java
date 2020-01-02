@@ -1,4 +1,4 @@
-package dao;
+package interfaces;
 
 import model.User;
 

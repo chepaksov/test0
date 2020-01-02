@@ -1,6 +1,6 @@
 package service;
 
-import dao.UserDAO;
+import dao.UserJdbcDAO;
 import exception.DBException;
 import model.User;
 
@@ -15,7 +15,7 @@ public class UserService {
 
 
     public List<User> getAllUsers() {
-        List<User> user = new UserDAO(getMysqlConnection()).getAllUser();
+        List<User> user = new UserJdbcDAO(getMysqlConnection()).getAllUser();
         return user;
     }
 
@@ -30,18 +30,18 @@ public class UserService {
 
     public boolean addUser(User user) {
         if (!existUser(user.getName())) {
-            new UserDAO(getMysqlConnection()).addUser(user);
+            new UserJdbcDAO(getMysqlConnection()).addUser(user);
             return true;
         } else return false;
 
     }
 
     public void editUser(User user) {
-        new UserDAO(getMysqlConnection()).editUser(user);
+        new UserJdbcDAO(getMysqlConnection()).editUser(user);
     }
 
     public void delUser(String name) {
-        new UserDAO(getMysqlConnection()).delUser(name);
+        new UserJdbcDAO(getMysqlConnection()).delUser(name);
     }
 
 
