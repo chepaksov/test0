@@ -1,6 +1,7 @@
 package servlets;
 
 import service.UserService;
+import service.UserServiceHibernate;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +15,8 @@ import java.io.IOException;
 public class DelServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("param1");
-        new UserService().delUser(name);
+      //  new UserService().delUser(name);
+        UserServiceHibernate.getInstance().delUser(name);
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("удалил");
 

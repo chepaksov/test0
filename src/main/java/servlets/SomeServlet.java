@@ -3,6 +3,7 @@ package servlets;
 
 import model.User;
 import service.UserService;
+import service.UserServiceHibernate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +22,8 @@ public class SomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<String> users = new LinkedList<>();
-        List<User> list = new UserService().getAllUsers();
+       // List<User> list = new UserService().getAllUsers();
+        List<User> list = UserServiceHibernate.getInstance().getAllUsers();
         for (User s : list) {
             users.add(s.getName());
         }

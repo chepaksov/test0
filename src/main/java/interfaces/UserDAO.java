@@ -9,4 +9,6 @@ public interface UserDAO {
     public void addUser(User user);
     public void editUser(User user);
     public void delUser(String name);
+    public  void delUserHql(String name, long id);
+    public void editUser(User user, Long id);
 }

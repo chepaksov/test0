@@ -77,5 +77,15 @@ public class UserJdbcDAO implements UserDAO {
         }
     }
 
+    @Override
+    public void delUserHql(String name, long id) {
+
+    }
+
+    @Override
+    public void editUser(User user, Long id) {
+
+    }
+
 
 }
