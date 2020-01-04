@@ -1,16 +1,12 @@
 package dao;
 
-import org.hibernate.Criteria;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import interfaces.UserDAO;
 import model.User;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserHibernateDAO implements UserDAO {
@@ -19,6 +15,7 @@ public class UserHibernateDAO implements UserDAO {
     public UserHibernateDAO(Session session) {
         this.session = session;
     }
+
     @Override
     public List<User> getAllUser() {
         Transaction transaction = session.beginTransaction();
@@ -34,38 +31,25 @@ public class UserHibernateDAO implements UserDAO {
         session.save(user);
         transaction.commit();
         session.close();
-
     }
 
     @Override
     public void editUser(User user) {
-
-
-
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("UPDATE User SET password = :password, example = :example  WHERE name = :name");
+        query.setParameter("name", user.getName()).setParameter("password", user.getPassword()).setParameter("example", user.getExample()).executeUpdate();
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public void delUser(String name) {
-
-    }
-
-    @Override
-    public void delUserHql(String name, long id) {
         Transaction transaction = session.beginTransaction();
-        User employee = (User) session.get(User.class, id);
-        session.delete(employee);
+        Query query = session.createQuery("DELETE User WHERE name = :name");
+        query.setParameter("name", name).executeUpdate();
         transaction.commit();
         session.close();
 
-    }
-
-    @Override
-    public void editUser(User user, Long id) {
-        Transaction transaction = session.beginTransaction();
-        User employee = (User) session.get(User.class, id);
-        session.update(user);
-        transaction.commit();
-        session.close();
     }
 
 

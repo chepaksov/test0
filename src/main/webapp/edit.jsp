@@ -9,7 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Edit pp01</title>
+    <title>Edit pp04</title>
 </head>
 <body>
 <form action="/edit" method="POST">
