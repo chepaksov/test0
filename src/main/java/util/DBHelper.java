@@ -2,17 +2,11 @@ package util;
 
 import model.User;
 
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
+
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.internal.SessionFactoryImpl;
 import org.hibernate.service.ServiceRegistry;
-
-import java.sql.Connection;
-import java.sql.SQLException;
 
 
 public class DBHelper {
@@ -38,7 +32,7 @@ public class DBHelper {
         configuration.setProperty("hibernate.connection.username", "root");
         configuration.setProperty("hibernate.connection.password", "root");
         configuration.setProperty("hibernate.show_sql", "true");
-      //  configuration.setProperty("hibernate.hbm2ddl.auto", "create");
+        //  configuration.setProperty("hibernate.hbm2ddl.auto", "create");
 
         return configuration;
     }

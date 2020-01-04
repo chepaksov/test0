@@ -1,12 +1,9 @@
 package service;
 
 import dao.UserHibernateDAO;
-import dao.UserJdbcDAO;
-import model.User;
 import model.User;
 import org.hibernate.SessionFactory;
 import util.DBHelper;
-
 
 
 import java.util.List;
@@ -27,7 +24,7 @@ public class UserServiceHibernate {
         }
         return userServiceHibernate;
     }
-    
+
 
     public List<User> getAllUsers() {
         List<User> user = new UserHibernateDAO(sessionFactory.openSession()).getAllUser();
@@ -52,26 +49,24 @@ public class UserServiceHibernate {
     }
 
     public void editUser(User user) {
-        new UserHibernateDAO(sessionFactory.openSession()).editUser(user, idDelUserHql(user.getName()));
+        new UserHibernateDAO(sessionFactory.openSession()).editUserHql(user, idDelUserHql(user.getName()));
     }
 
     public void delUser(String name) {
         new UserHibernateDAO(sessionFactory.openSession()).delUserHql(name, idDelUserHql(name));
     }
 
-    public Long idDelUserHql (String name) {
+    public Long idDelUserHql(String name) {
         long id = 0;
-        List <User> list = new UserHibernateDAO(sessionFactory.openSession()).getAllUser();
-        for (User s: list){
-            if(s.getName().equals(name)) {
+        List<User> list = new UserHibernateDAO(sessionFactory.openSession()).getAllUser();
+        for (User s : list) {
+            if (s.getName().equals(name)) {
                 id = s.getId();
             }
 
         }
         return id;
     }
-
-
 
 
 }

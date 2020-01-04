@@ -19,6 +19,7 @@ public class UserHibernateDAO implements UserDAO {
     public UserHibernateDAO(Session session) {
         this.session = session;
     }
+
     @Override
     public List<User> getAllUser() {
         Transaction transaction = session.beginTransaction();
@@ -41,7 +42,6 @@ public class UserHibernateDAO implements UserDAO {
     public void editUser(User user) {
 
 
-
     }
 
     @Override
@@ -60,10 +60,10 @@ public class UserHibernateDAO implements UserDAO {
     }
 
     @Override
-    public void editUser(User user, Long id) {
+    public void editUserHql(User user, Long id) {
         Transaction transaction = session.beginTransaction();
         User employee = (User) session.get(User.class, id);
-        session.update(user);
+        session.update(employee);
         transaction.commit();
         session.close();
     }

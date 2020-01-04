@@ -83,7 +83,7 @@ public class UserJdbcDAO implements UserDAO {
     }
 
     @Override
-    public void editUser(User user, Long id) {
+    public void editUserHql(User user, Long id) {
 
     }
 
