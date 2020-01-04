@@ -1,11 +1,9 @@
 package service;
 
 import dao.UserDAO;
-import exception.DBException;
 import model.User;
 
 import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
