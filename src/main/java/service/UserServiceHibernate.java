@@ -49,24 +49,11 @@ public class UserServiceHibernate {
     }
 
     public void editUser(User user) {
-        new UserHibernateDAO(sessionFactory.openSession()).editUserHql(user, idDelUserHql(user.getName()));
+        new UserHibernateDAO(sessionFactory.openSession()).editUser(user);
     }
 
     public void delUser(String name) {
-        new UserHibernateDAO(sessionFactory.openSession()).delUserHql(name, idDelUserHql(name));
+        new UserHibernateDAO(sessionFactory.openSession()).delUser(name);
     }
-
-    public Long idDelUserHql(String name) {
-        long id = 0;
-        List<User> list = new UserHibernateDAO(sessionFactory.openSession()).getAllUser();
-        for (User s : list) {
-            if (s.getName().equals(name)) {
-                id = s.getId();
-            }
-
-        }
-        return id;
-    }
-
 
 }

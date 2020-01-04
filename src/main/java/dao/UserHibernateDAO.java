@@ -40,32 +40,21 @@ public class UserHibernateDAO implements UserDAO {
 
     @Override
     public void editUser(User user) {
-
-
+        Transaction transaction = session.beginTransaction();
+        Query query = session.createQuery("UPDATE User SET password = :password, example = :example  WHERE name = :name");
+        query.setParameter("name", user.getName()).setParameter("password", user.getPassword()).setParameter("example", user.getExample()).executeUpdate();
+        transaction.commit();
+        session.close();
     }
 
     @Override
     public void delUser(String name) {
-
-    }
-
-    @Override
-    public void delUserHql(String name, long id) {
         Transaction transaction = session.beginTransaction();
-        User employee = (User) session.get(User.class, id);
-        session.delete(employee);
+        Query query = session.createQuery("DELETE User WHERE name = :name");
+        query.setParameter("name", name).executeUpdate();
         transaction.commit();
         session.close();
 
-    }
-
-    @Override
-    public void editUserHql(User user, Long id) {
-        Transaction transaction = session.beginTransaction();
-        User employee = (User) session.get(User.class, id);
-        session.update(employee);
-        transaction.commit();
-        session.close();
     }
 
 

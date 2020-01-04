@@ -13,7 +13,5 @@ public interface UserDAO {
 
     public void delUser(String name);
 
-    public void delUserHql(String name, long id);
 
-    public void editUserHql(User user, Long id);
 }
