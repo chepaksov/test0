@@ -15,4 +15,6 @@ public interface UserDAO {
 
     public void delUser(String name);
 
+    public User checkAuth(String name);
+
 }

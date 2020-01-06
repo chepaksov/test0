@@ -32,12 +32,12 @@ public class EditServlet extends HttpServlet {
         User user = new User();
         String name = req.getParameter("name");
         String password = req.getParameter("password");
-        String example = req.getParameter("example");
-        if (!name.equals("") && !password.equals("") && !example.equals("")) {
+        String role = req.getParameter("role");
+        if (!name.equals("") && !password.equals("") && !role.equals("")) {
             if (UserService.getInstance().existUser(name)) {
                 user.setName(name);
                 user.setPassword(password);
-                user.setExample(example);
+                user.setRole(role);
                 // new UserService().editUser(user);
                 UserService.getInstance().editUser(user);
                 resp.getWriter().println("изменено");

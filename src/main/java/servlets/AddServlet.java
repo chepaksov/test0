@@ -14,15 +14,14 @@ import java.io.IOException;
 @WebServlet("/add")
 
 public class AddServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        req.getRequestDispatcher("add.html").include(req, resp);
-
-    }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = new User(req.getParameter("name"), req.getParameter("password"), req.getParameter("example"));
-        if (UserService.getInstance().addUser(user)) {
+
+
+
+        if (UserService.getInstance().addUser(new User(req.getParameter("name"), req.getParameter("password"), req.getParameter("role")))) {
+
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("добавил");
         } else {

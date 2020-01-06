@@ -46,7 +46,7 @@ public class UserJdbcDAO implements UserDAO {
             pstmt = connection.prepareStatement("insert users (NAME, PASSWORD, example) VALUES (?,?,?)");
             pstmt.setString(1, user.getName());
             pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getExample());
+            pstmt.setString(3, user.getRole());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -58,7 +58,7 @@ public class UserJdbcDAO implements UserDAO {
         try {
             preparedStatement = connection.prepareStatement("UPDATE users SET password = ?, example = ?  WHERE name LIKE ?");
             preparedStatement.setString(1, user.getPassword());
-            preparedStatement.setString(2, user.getExample());
+            preparedStatement.setString(2, user.getRole());
             preparedStatement.setString(3, user.getName());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
@@ -75,6 +75,11 @@ public class UserJdbcDAO implements UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public User checkAuth(String name) {
+        return null;
     }
 
 

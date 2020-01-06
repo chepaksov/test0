@@ -36,8 +36,8 @@ public class UserHibernateDAO implements UserDAO {
     @Override
     public void editUser(User user) {
         Transaction transaction = session.beginTransaction();
-        Query query = session.createQuery("UPDATE User SET password = :password, example = :example  WHERE name = :name");
-        query.setParameter("name", user.getName()).setParameter("password", user.getPassword()).setParameter("example", user.getExample()).executeUpdate();
+        Query query = session.createQuery("UPDATE User SET password = :password, role = :role  WHERE name = :name");
+        query.setParameter("name", user.getName()).setParameter("password", user.getPassword()).setParameter("role", user.getRole()).executeUpdate();
         transaction.commit();
         session.close();
     }
@@ -49,6 +49,16 @@ public class UserHibernateDAO implements UserDAO {
         query.setParameter("name", name).executeUpdate();
         transaction.commit();
         session.close();
+
+    }
+
+    @Override
+    public User checkAuth(String name) {
+        Transaction transaction = session.beginTransaction();
+        User user = (User) session.createQuery("from User WHERE name = :name").setParameter("name", name).getSingleResult();
+        transaction.commit();
+        session.close();
+        return user;
 
     }
 

@@ -16,24 +16,29 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "example")
-    private String example;
+    @Column(name = "role")
+    private String role;
 
     public User() {
 
     }
 
-    public User(String name, String password, String example) {
+    public User(String name, String password, String role) {
         this.name = name;
         this.password = password;
-        this.example = example;
+        this.role = role;
     }
 
-    public User(long id, String name, String password, String example) {
+    public User(long id, String name, String password, String role) {
         this.id = id;
         this.name = name;
         this.password = password;
-        this.example = example;
+        this.role = role;
+    }
+
+    public User(String name, String password){
+        this.name = name;
+        this.password = password;
     }
 
 
@@ -61,12 +66,12 @@ public class User {
         this.password = password;
     }
 
-    public String getExample() {
-        return example;
+    public String getRole() {
+        return role;
     }
 
-    public void setExample(String example) {
-        this.example = example;
+    public void setRole(String example) {
+        this.role = role;
     }
 
 
