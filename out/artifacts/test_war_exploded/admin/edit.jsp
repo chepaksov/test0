@@ -9,13 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Edit pp04</title>
+    <title>Edit pp05</title>
 </head>
 <body>
-<form action="/edit" method="POST">
+<form action="/admin/edit" method="POST">
     name: <input type="text" name="name" value="${name}"/>
     password: <input type="password" name="password"/>
-    example: <input type="text" name="example"/>
+    role: <input type="text" name="role"/>
     <input type="submit" value="Ok">
 </form>
 </body>

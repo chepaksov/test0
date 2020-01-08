@@ -25,6 +25,7 @@ public class UserHibernateDAO implements UserDAO {
         return list;
     }
 
+
     @Override
     public void addUser(User user) {
         Transaction transaction = session.beginTransaction();

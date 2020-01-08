@@ -14,30 +14,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/edit")
+@WebServlet("/admin/edit")
 
 public class EditServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        resp.setContentType("text/html;charset=utf-8");
+
         String get = req.getParameter("param1");
+        resp.setContentType("text/html;charset=utf-8");
         req.setAttribute("name", get);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/edit.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("edit.jsp");
         dispatcher.forward(req, resp);
+
+
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=utf-8");
-        User user = new User();
+
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         String role = req.getParameter("role");
+        User user = new User(name, password, role);
         if (!name.equals("") && !password.equals("") && !role.equals("")) {
             if (UserService.getInstance().existUser(name)) {
-                user.setName(name);
-                user.setPassword(password);
-                user.setRole(role);
+
                 // new UserService().editUser(user);
                 UserService.getInstance().editUser(user);
                 resp.getWriter().println("изменено");

@@ -31,7 +31,6 @@ public class UserService {
 
 
     public List<User> getAllUsers() {
-
         List<User> user = new UserDaoFactory().getUserDao().getAllUser();
         return user;
     }
@@ -62,11 +61,11 @@ public class UserService {
     }
 
     public String checkAuth(User user) {
-       User test = new UserDaoFactory().getUserDao().checkAuth(user.getName());
-       if (test.getPassword().equals(user.getPassword())) {
-           return test.getRole();
-       }
-       return null;
+        User test = new UserDaoFactory().getUserDao().checkAuth(user.getName());
+        if (test.getPassword().equals(user.getPassword())) {
+            return test.getRole();
+        }
+        return null;
 
     }
 

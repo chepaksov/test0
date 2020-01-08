@@ -25,7 +25,7 @@ public class AdminServlet extends HttpServlet {
         }
         resp.setContentType("text/html;charset=utf-8");
         req.setAttribute("users", users);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/admin.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("admin/admin.jsp");
         dispatcher.forward(req, resp);
 
     }

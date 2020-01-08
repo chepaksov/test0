@@ -15,7 +15,7 @@
 <a href="/user">Страница юзера</a>
 <ul>
     <c:forEach var="user" items="${users}">
-        <li><c:out value="${user}"/> <a href="/edit?param1=${user}">Изменить</a> <a href="/del?param1=${user}">Удалить</a> </li>
+        <li><c:out value="${user}"/> <a href="/admin/edit?param1=${user}">Изменить</a> <a href="/admin/del?param1=${user}">Удалить</a> </li>
     </c:forEach>
 </ul>
 </body>

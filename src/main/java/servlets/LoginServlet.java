@@ -4,6 +4,7 @@ import model.User;
 import service.UserService;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,11 +37,9 @@ public class LoginServlet extends HttpServlet {
             resp.getWriter().println("ошибка");
         }
         if (role.equals("user")) {
-            Userservlet userservlet = new Userservlet();
-            userservlet.doGet(req, resp);
+            resp.sendRedirect(req.getContextPath() + "/user");
         } else if (role.equals("admin")) {
-            AdminServlet adminServlet = new AdminServlet();
-            adminServlet.doGet(req,resp);
+            resp.sendRedirect(req.getContextPath() + "/admin");
         } else {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("ошибка");
