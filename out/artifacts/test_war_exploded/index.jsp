@@ -15,7 +15,7 @@
 <a href="/add">Добавить юзера</a>
 <ul>
     <c:forEach var="user" items="${users}">
-        <li><c:out value="${user}"/> <a href="/edit?param1=${user}">Изменить</a> <a href="/del?param1=${user}">Удалить</a> </li>
+        <li>Id: <c:out value="${user.id}"/>, Name: <c:out value="${user.name}"/>, Password: <c:out value="${user.password}"/>, Example: <c:out value="${user.example}"/> || <a href="/edit?param1=${user.name}">Изменить</a> <a href="/del?param1=${user.name}">Удалить</a> </li>
     </c:forEach>
 </ul>
 </body>
