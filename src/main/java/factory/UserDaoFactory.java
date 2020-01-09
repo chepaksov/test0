@@ -11,7 +11,7 @@ import util.DBHelper;
 import java.io.*;
 import java.util.Properties;
 
-public class UserDaoFactory {
+public  class UserDaoFactory {
 
     public UserDAO getUserDao() {
         FileInputStream fis;
