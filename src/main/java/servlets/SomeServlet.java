@@ -22,13 +22,9 @@ import java.util.List;
 public class SomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<String> users = new LinkedList<>();
         List<User> list = UserService.getInstance().getAllUsers();
-        for (User s : list) {
-            users.add(s.getName());
-        }
         resp.setContentType("text/html;charset=utf-8");
-        req.setAttribute("users", users);
+        req.setAttribute("users", list);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
         dispatcher.forward(req, resp);
     }
