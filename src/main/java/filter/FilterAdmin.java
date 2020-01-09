@@ -10,12 +10,9 @@ import service.UserService;
 import servlets.*;
 
 
-@WebFilter("/admin/*")
+@WebFilter("/*")
 public class FilterAdmin implements Filter {
-    //private UserService userService;
-  //  public FilterAdmin(UserService userService) {
-       // this.userService = userService;
-   // }
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -24,18 +21,21 @@ public class FilterAdmin implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException, NullPointerException {
 
-    //    HttpSession httpSession = ((HttpServletRequest) request).getSession();
-       // userService.ge
-      //  httpSession.setAttribute("role", );
-        if (LoginServlet.role == null || !LoginServlet.role.equals("admin")) {
-            response.setContentType("text/html;charset=utf-8");
+        HttpSession httpSession = ((HttpServletRequest) request).getSession();
+        String role = (String) httpSession.getAttribute("role");
+        response.setContentType("text/html;charset=utf-8");
+        if (role == null) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/login");
             dispatcher.forward(request, response);
 
-        }
-         else {
-            response.setContentType("text/html;charset=utf-8");
+        } else if (role.equals("user")) {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/user");
+            dispatcher.forward(request, response);
+        } else if (role.equals("admin")) {
             chain.doFilter(request, response);
+        } else {
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/login");
+            dispatcher.forward(request, response);
         }
     }
 

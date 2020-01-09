@@ -17,14 +17,9 @@ import java.util.List;
 public class AdminServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        List<String> users = new LinkedList<>();
         List<User> list = UserService.getInstance().getAllUsers();
-        for (User s : list) {
-            users.add(s.getName());
-        }
         resp.setContentType("text/html;charset=utf-8");
-        req.setAttribute("users", users);
+        req.setAttribute("users", list);
         RequestDispatcher dispatcher = req.getRequestDispatcher("admin/admin.jsp");
         dispatcher.forward(req, resp);
 

@@ -1,6 +1,7 @@
 package service;
 
 
+import dao.DAOFactory;
 import model.User;
 import org.hibernate.SessionFactory;
 import util.DBHelper;
@@ -31,7 +32,7 @@ public class UserService {
 
 
     public List<User> getAllUsers() {
-        List<User> user = new UserDaoFactory().getUserDao().getAllUser();
+        List<User> user = DAOFactory.getDAOFactory().createUserDAO().getAllUser();
         return user;
     }
 
@@ -46,22 +47,22 @@ public class UserService {
 
     public boolean addUser(User user) {
         if (!existUser(user.getName())) {
-            new UserDaoFactory().getUserDao().addUser(user);
+            DAOFactory.getDAOFactory().createUserDAO().addUser(user);
             return true;
         } else return false;
 
     }
 
     public void editUser(User user) {
-        new UserDaoFactory().getUserDao().editUser(user);
+        DAOFactory.getDAOFactory().createUserDAO().editUser(user);
     }
 
     public void delUser(String name) {
-        new UserDaoFactory().getUserDao().delUser(name);
+        DAOFactory.getDAOFactory().createUserDAO().delUser(name);
     }
 
     public String checkAuth(User user) {
-        User test = new UserDaoFactory().getUserDao().checkAuth(user.getName());
+        User test = DAOFactory.getDAOFactory().createUserDAO().checkAuth(user.getName());
         if (test.getPassword().equals(user.getPassword())) {
             return test.getRole();
         }

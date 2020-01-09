@@ -1,19 +1,19 @@
-package factory;
+package dao;
 
-
-import dao.UserHibernateDAO;
-import dao.UserJdbcDAO;
 import interfaces.UserDAO;
-
 import service.UserService;
 import util.DBHelper;
 
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 
-public class UserDaoFactory {
+public abstract class DAOFactory {
 
-    public UserDAO getUserDao() {
+    public abstract UserDAO createUserDAO();
+
+    public static DAOFactory getDAOFactory() {
+        DAOFactory daoFactory = null;
         FileInputStream fis;
         Properties property = new Properties();
 
@@ -25,16 +25,20 @@ public class UserDaoFactory {
 
 
             if (daoType.equals("Hibernate")) {
-                return new UserHibernateDAO(UserService.getInstance().getSesFac().openSession());
+                return daoFactory = new DAOHibernateFactorySession();
             } else if (daoType.equals("JDBC")) {
-                return new UserJdbcDAO(DBHelper.getInstance().getConnection());
+                return daoFactory = new DAOJDBCFactory();
+
             }
 
 
         } catch (IOException e) {
-            System.err.println("ОШИБКА: Файл свойств отсутствует!");
+            e.printStackTrace();
         }
-        return null;
+        return daoFactory;
+
+
     }
+
 
 }
