@@ -2,6 +2,7 @@ package service;
 
 import dao.UserJdbcDAO;
 import exception.DBException;
+import interfaces.UserDAO;
 import model.User;
 
 import java.sql.*;
@@ -9,13 +10,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
+    private UserDAO userDAO;
 
     public UserService() {
+        this.userDAO = new UserJdbcDAO(getMysqlConnection());
     }
 
 
     public List<User> getAllUsers() {
-        List<User> user = new UserJdbcDAO(getMysqlConnection()).getAllUser();
+        List<User> user = userDAO.getAllUser();
         return user;
     }
 
