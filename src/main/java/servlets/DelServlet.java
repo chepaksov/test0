@@ -17,7 +17,7 @@ public class DelServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String name = req.getParameter("param1");
         //  new UserService().delUser(name);
-        UserService.getInstance().delUser(name);
+        new UserService().delUser(name);
         resp.setContentType("text/html;charset=utf-8");
         resp.getWriter().println("удалил");
 

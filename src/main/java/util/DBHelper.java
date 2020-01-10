@@ -16,23 +16,10 @@ import java.sql.SQLException;
 
 public class DBHelper {
 
-    public static DBHelper instance;
-
-    private DBHelper() {
-    }
-
-
-    public static DBHelper getInstance() {
-        if (instance == null) {
-            instance = new DBHelper();
-        }
-        return instance;
-    }
-
 
     private static SessionFactory sessionFactory;
 
-    public SessionFactory getSessionFactory() {
+    public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             sessionFactory = createSessionFactory();
         }
@@ -66,7 +53,7 @@ public class DBHelper {
     }
 
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         try {
             DriverManager.registerDriver((Driver) Class.forName("com.mysql.cj.jdbc.Driver").newInstance());
 

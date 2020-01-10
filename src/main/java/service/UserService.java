@@ -15,27 +15,11 @@ import java.util.List;
 public class UserService {
     private UserDAO userDAO;
 
-    private static UserService userService;
 
-
-    public static UserService getInstance() {
-        if (userService == null) {
-            userService = new UserService();
-        }
-        return userService;
-    }
-
-
-
-    public SessionFactory getSesFac() {
-        return DBHelper.getInstance().getSessionFactory();
-
-    }
     public UserService() {
-        this.userDAO = new UserHibernateDAO(getSesFac().openSession());
+        this.userDAO = new UserHibernateDAO(DBHelper.getSessionFactory().openSession());
+       //  this.userDAO = new UserJdbcDAO(DBHelper.getConnection());
     }
-
-
 
 
     public List<User> getAllUsers() {
@@ -53,10 +37,10 @@ public class UserService {
 
 
     public boolean addUser(User user) {
-        if (!existUser(user.getName())) {
-            userDAO.addUser(user);
+      //  if (!existUser(user.getName())) {
+           userDAO.addUser(user);
             return true;
-        } else return false;
+    //    } else return false;
 
     }
 
@@ -67,9 +51,6 @@ public class UserService {
     public void delUser(String name) {
         userDAO.delUser(name);
     }
-
-
-
 
 
 }

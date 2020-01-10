@@ -22,7 +22,7 @@ public class AddServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = new User(req.getParameter("name"), req.getParameter("password"), req.getParameter("example"));
-        if (UserService.getInstance().addUser(user)) {
+        if (new UserService().addUser(user)) {
             //  if (new UserService().addUser(user)) {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("добавил");

@@ -25,7 +25,7 @@ public class UserHibernateDAO implements UserDAO {
         Transaction transaction = session.beginTransaction();
         List<User> list = session.createQuery("FROM User").list();
         transaction.commit();
-        session.close();
+       // session.close();
         return list;
     }
 
@@ -56,6 +56,8 @@ public class UserHibernateDAO implements UserDAO {
         session.close();
 
     }
+
+
 
 
 }

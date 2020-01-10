@@ -34,12 +34,12 @@ public class EditServlet extends HttpServlet {
         String example = req.getParameter("example");
         if (!name.equals("") && !password.equals("") && !example.equals("")) {
             //  if (new UserService().existUser(name)) {
-            if (UserService.getInstance().existUser(name)) {
+            if (new UserService().existUser(name)) {
                 user.setName(name);
                 user.setPassword(password);
                 user.setExample(example);
                 // new UserService().editUser(user);
-                UserService.getInstance().editUser(user);
+                new UserService().editUser(user);
                 resp.getWriter().println("изменено");
             } else {
 
