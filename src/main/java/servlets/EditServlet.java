@@ -3,7 +3,7 @@ package servlets;
 
 import model.User;
 import service.UserService;
-import service.UserServiceHibernate;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -34,12 +34,12 @@ public class EditServlet extends HttpServlet {
         String example = req.getParameter("example");
         if (!name.equals("") && !password.equals("") && !example.equals("")) {
             //  if (new UserService().existUser(name)) {
-            if (UserServiceHibernate.getInstance().existUser(name)) {
+            if (UserService.getInstance().existUser(name)) {
                 user.setName(name);
                 user.setPassword(password);
                 user.setExample(example);
                 // new UserService().editUser(user);
-                UserServiceHibernate.getInstance().editUser(user);
+                UserService.getInstance().editUser(user);
                 resp.getWriter().println("изменено");
             } else {
 

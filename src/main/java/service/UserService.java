@@ -1,9 +1,12 @@
 package service;
 
+import dao.UserHibernateDAO;
 import dao.UserJdbcDAO;
 import exception.DBException;
 import interfaces.UserDAO;
 import model.User;
+import org.hibernate.SessionFactory;
+import util.DBHelper;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,9 +15,25 @@ import java.util.List;
 public class UserService {
     private UserDAO userDAO;
 
-    public UserService() {
-        this.userDAO = new UserJdbcDAO(getMysqlConnection());
+    private static UserService userService;
+
+    private SessionFactory sessionFactory;
+
+    public UserService(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
     }
+
+    public static UserService getInstance() {
+        if (userService == null) {
+            userService = new UserService(DBHelper.getSessionFactory());
+        }
+        return userService;
+    }
+    public UserService() {
+        this.userDAO = new UserHibernateDAO(sessionFactory.openSession());
+    }
+
+
 
 
     public List<User> getAllUsers() {
@@ -33,18 +52,18 @@ public class UserService {
 
     public boolean addUser(User user) {
         if (!existUser(user.getName())) {
-            new UserJdbcDAO(getMysqlConnection()).addUser(user);
+            userDAO.addUser(user);
             return true;
         } else return false;
 
     }
 
     public void editUser(User user) {
-        new UserJdbcDAO(getMysqlConnection()).editUser(user);
+        userDAO.editUser(user);
     }
 
     public void delUser(String name) {
-        new UserJdbcDAO(getMysqlConnection()).delUser(name);
+        userDAO.delUser(name);
     }
 
 

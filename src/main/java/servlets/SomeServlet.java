@@ -3,7 +3,7 @@ package servlets;
 
 import model.User;
 import service.UserService;
-import service.UserServiceHibernate;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ import java.util.List;
 public class SomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<User> list = UserServiceHibernate.getInstance().getAllUsers();
+        List<User> list = UserService.getInstance().getAllUsers();
         resp.setContentType("text/html;charset=utf-8");
         req.setAttribute("users", list);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
