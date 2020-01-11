@@ -6,15 +6,14 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import interfaces.UserDAO;
 import model.User;
+import util.DBHelper;
 
 import java.util.List;
 
 public class UserHibernateDAO implements UserDAO {
-    private Session session;
 
-    public UserHibernateDAO(Session session) {
-        this.session = session;
-    }
+    private Session session = DBHelper.getInstance().getSessionFactory().openSession();
+
 
     @Override
     public List<User> getAllUser() {

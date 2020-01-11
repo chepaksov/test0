@@ -25,11 +25,6 @@ public class UserService {
     private UserService() {
     }
 
-    public SessionFactory getSesFac() {
-        return DBHelper.getInstance().getSessionFactory();
-
-    }
-
 
     public List<User> getAllUsers() {
 
