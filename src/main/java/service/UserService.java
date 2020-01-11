@@ -37,10 +37,10 @@ public class UserService {
 
 
     public boolean addUser(User user) {
-      //  if (!existUser(user.getName())) {
+        if (!existUser(user.getName())) {
            userDAO.addUser(user);
             return true;
-    //    } else return false;
+        } else return false;
 
     }
 
