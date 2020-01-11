@@ -23,10 +23,12 @@ public class AddServlet extends HttpServlet {
         User user = new User(req.getParameter("name"), req.getParameter("password"), req.getParameter("example"));
         if (new UserService().addUser(user)) {
             resp.setContentType("text/html;charset=utf-8");
-            resp.getWriter().println("добавил");
+            resp.sendRedirect("/index");
         } else {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("не добавил");
+
+
         }
 
 
