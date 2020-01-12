@@ -17,8 +17,8 @@ public class UserService {
 
 
     public UserService() {
-        this.userDAO = new UserHibernateDAO(DBHelper.getSessionFactory().openSession());
-       //  this.userDAO = new UserJdbcDAO(DBHelper.getConnection());
+      //  this.userDAO = new UserHibernateDAO(DBHelper.getSessionFactory().openSession());
+        this.userDAO = new UserJdbcDAO(DBHelper.getConnection());
     }
 
 

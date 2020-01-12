@@ -25,7 +25,7 @@ public class AddServlet extends HttpServlet {
         if (new UserService().addUser(user)) {
             //  if (new UserService().addUser(user)) {
             resp.setContentType("text/html;charset=utf-8");
-            resp.getWriter().println("добавил");
+            resp.sendRedirect("/index");
         } else {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("не добавил");
