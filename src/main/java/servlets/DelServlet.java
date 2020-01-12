@@ -16,7 +16,7 @@ public class DelServlet extends HttpServlet {
         String name = req.getParameter("param1");
         new UserService().delUser(name);
         resp.setContentType("text/html;charset=utf-8");
-        resp.getWriter().println("удалил");
+        resp.sendRedirect("/index");
 
     }
 }

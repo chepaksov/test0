@@ -3,6 +3,7 @@ package servlets;
 import model.User;
 import service.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,10 +28,12 @@ public class AddServlet extends HttpServlet {
         } else {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("не добавил");
+            // задержка
 
+
+            
 
         }
-
 
     }
 
