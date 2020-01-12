@@ -40,7 +40,7 @@ public class EditServlet extends HttpServlet {
                 user.setExample(example);
                 // new UserService().editUser(user);
                 UserService.getInstance().editUser(user);
-                resp.getWriter().println("изменено");
+                resp.sendRedirect("/index");
             } else {
 
                 resp.getWriter().println("такого юзера нет в базе");

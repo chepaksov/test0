@@ -1,1 +1,1 @@
-type = JDBC
+type = Hibernate
