@@ -8,8 +8,7 @@ import model.User;
 import org.hibernate.SessionFactory;
 import util.DBHelper;
 
-import java.sql.*;
-import java.util.ArrayList;
+
 import java.util.List;
 
 public class UserService {
@@ -17,7 +16,7 @@ public class UserService {
 
 
     public UserService() {
-      //  this.userDAO = new UserHibernateDAO(DBHelper.getSessionFactory().openSession());
+        //  this.userDAO = new UserHibernateDAO(DBHelper.getSessionFactory().openSession());
         this.userDAO = new UserJdbcDAO(DBHelper.getConnection());
     }
 
@@ -38,7 +37,7 @@ public class UserService {
 
     public boolean addUser(User user) {
         if (!existUser(user.getName())) {
-           userDAO.addUser(user);
+            userDAO.addUser(user);
             return true;
         } else return false;
 
