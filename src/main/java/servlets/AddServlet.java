@@ -28,9 +28,6 @@ public class AddServlet extends HttpServlet {
         } else {
             resp.setContentType("text/html;charset=utf-8");
             resp.getWriter().println("не добавил");
-            // задержка
-
-
             
 
         }
