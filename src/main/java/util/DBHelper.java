@@ -14,7 +14,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-
 public class DBHelper {
 
     public static DBHelper instance;

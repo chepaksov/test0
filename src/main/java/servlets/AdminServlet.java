@@ -23,11 +23,8 @@ public class AdminServlet extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("admin/admin.jsp");
         dispatcher.forward(req, resp);
 
+
     }
-
-
-
-
 
 
 }

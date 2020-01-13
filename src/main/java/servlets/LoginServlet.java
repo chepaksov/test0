@@ -16,7 +16,7 @@ import java.io.IOException;
 
 @WebServlet("/login")
 public class LoginServlet extends HttpServlet {
-    String role = null;
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,28 +29,30 @@ public class LoginServlet extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String role;
         HttpSession httpSession = req.getSession();
         resp.setContentType("text/html;charset=utf-8");
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         User user = new User(name, password);
         role = UserService.getInstance().checkAuth(user);
-        if(role == null) {
-            httpSession.setAttribute("role", role);
-            resp.setContentType("text/html;charset=utf-8");
-            resp.getWriter().println("ошибка");
-        }
-        if (role.equals("user")) {
-            httpSession.setAttribute("role", role);
-            resp.sendRedirect(req.getContextPath() + "/user");
-        } else if (role.equals("admin")) {
-            httpSession.setAttribute("role", role);
-            resp.sendRedirect(req.getContextPath() + "/admin");
-        } else {
-            httpSession.setAttribute("role", role);
-            resp.sendRedirect(req.getContextPath() + "/login");
+        httpSession.setAttribute("role", role);
+        resp.setContentType("text/html;charset=utf-8");
+        if (role == null) {
+
+            resp.sendRedirect("/login");
+
         }
 
+        if (role.equals("user")) {
+            resp.sendRedirect("/user");
+
+        } else if (role.equals("admin")) {
+            resp.sendRedirect("/admin");
+
+        } else {
+            resp.sendRedirect("/login");
+        }
 
 
     }

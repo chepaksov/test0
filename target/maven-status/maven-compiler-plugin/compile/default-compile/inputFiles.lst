@@ -4,7 +4,6 @@ C:\Users\1\Desktop\test\src\main\java\exception\DBException.java
 C:\Users\1\Desktop\test\src\main\java\servlets\AddServlet.java
 C:\Users\1\Desktop\test\src\main\java\dao\UserJdbcDAO.java
 C:\Users\1\Desktop\test\src\main\java\dao\DAOFactory.java
-C:\Users\1\Desktop\test\src\main\java\dao\UserDAOHibernateSessionImpl.java
 C:\Users\1\Desktop\test\src\main\java\interfaces\UserDAO.java
 C:\Users\1\Desktop\test\src\main\java\model\User.java
 C:\Users\1\Desktop\test\src\main\java\filter\FilterAdmin.java
@@ -17,4 +16,3 @@ C:\Users\1\Desktop\test\src\main\java\service\UserService.java
 C:\Users\1\Desktop\test\src\main\java\servlets\Userservlet.java
 C:\Users\1\Desktop\test\src\main\java\dao\UserHibernateDAO.java
 C:\Users\1\Desktop\test\src\main\java\servlets\LoginServlet.java
-C:\Users\1\Desktop\test\src\main\java\dao\UserDAOJDBCImpl.java

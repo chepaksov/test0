@@ -22,7 +22,7 @@ public class AddServlet extends HttpServlet {
             if (UserService.getInstance().addUser(new User(req.getParameter("name"), req.getParameter("password"), req.getParameter("role")))) {
 
                 resp.setContentType("text/html;charset=utf-8");
-                resp.getWriter().println("добавил");
+                resp.sendRedirect("/login");
             } else {
                 resp.setContentType("text/html;charset=utf-8");
                 resp.getWriter().println("не добавил");

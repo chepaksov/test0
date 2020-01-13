@@ -3,15 +3,14 @@ package filter;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-import service.UserService;
-import servlets.*;
 
-
-@WebFilter("/*")
+@WebFilter("/admin/*")
 public class FilterAdmin implements Filter {
+
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -19,25 +18,20 @@ public class FilterAdmin implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException, NullPointerException {
-
-        HttpSession httpSession = ((HttpServletRequest) request).getSession();
-        String role = (String) httpSession.getAttribute("role");
-        response.setContentType("text/html;charset=utf-8");
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
+        HttpSession session = req.getSession();
+        String role = (String) session.getAttribute("role");
         if (role == null) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/login");
-            dispatcher.forward(request, response);
-
+            res.sendRedirect("login");
         } else if (role.equals("user")) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/user"); // редирект
-            dispatcher.forward(request, response);
+            res.sendRedirect("user");
         } else if (role.equals("admin")) {
             chain.doFilter(request, response);
-        } else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/login");
-            dispatcher.forward(request, response);
         }
     }
+
 
     @Override
     public void destroy() {

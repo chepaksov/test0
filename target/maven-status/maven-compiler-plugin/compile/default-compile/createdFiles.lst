@@ -1,5 +1,4 @@
 exception\DBException.class
-dao\UserDAOHibernateSessionImpl.class
 interfaces\UserDAO.class
 servlets\AdminServlet.class
 servlets\LoginServlet.class
@@ -16,5 +15,4 @@ servlets\IndexServlet.class
 dao\UserHibernateDAO.class
 servlets\DelServlet.class
 servlets\AddServlet.class
-dao\UserDAOJDBCImpl.class
 model\User.class

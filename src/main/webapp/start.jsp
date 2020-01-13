@@ -8,7 +8,7 @@
 </head>
 <body>
 <p><input type="submit" value="Авторизация"
-          onclick="window.location='login';" />
+          onclick="window.location='login.jsp';" />
     <br />
     <input type="submit" value="Регистрация"
            onclick="window.location='registration.jsp';" />
