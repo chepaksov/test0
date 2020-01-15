@@ -4,8 +4,8 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
- 
-    @Bean(name="helloworld")
+
+    @Bean(name = "helloworld")
     public HelloWorld getHelloWorld() {
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.setMessage("Hello World!");
@@ -13,7 +13,7 @@ public class AppConfig {
     }
 
 
-    @Bean(name="cat")
+    @Bean(name = "cat")
     @Scope(value = "prototype")
     public Cat getCat() {
         Cat cat = new Cat();

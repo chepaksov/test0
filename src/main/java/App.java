@@ -21,7 +21,5 @@ public class App {
         System.out.println(cat == cat1);
 
 
-
-
     }
 }
