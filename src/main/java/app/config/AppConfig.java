@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
@@ -20,6 +21,7 @@ public class AppConfig {
     }
 
     @Bean(name = "time")
+    @Scope("singleton")
     public Timer getTimer() {
 
 
