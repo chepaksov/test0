@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
-
 @Configuration
 @ComponentScan(basePackages = "app")
 public class AppConfig {
@@ -21,15 +20,10 @@ public class AppConfig {
     }
 
     @Bean(name = "time")
-    @Scope("singleton")
     public Timer getTimer() {
-
-
-
-        return Timer.getInstance();
+        return new Timer();
 
     }
-
 
 
 }
