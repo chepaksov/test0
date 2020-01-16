@@ -19,7 +19,7 @@ public class AppConfig {
 
     }
 
-    @Bean(name = "time")
+    @Bean(name = "timer")
     public Timer getTimer() {
         return new Timer();
 
