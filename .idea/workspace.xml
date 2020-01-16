@@ -4,7 +4,9 @@
     <list default="true" id="4732413d-89d7-4ff5-98b3-0ffdc6cd74c2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/model/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/model/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/config/AppConfig.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +37,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="C:/android-sdk" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring_mvc" />
-    <property name="settings.editor.selected.configurable" value="lessc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="android.sdk.path" value="C:/android-sdk" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="lessc" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -186,7 +188,8 @@
       <workItem from="1574158953776" duration="624000" />
       <workItem from="1574251287873" duration="1260000" />
       <workItem from="1574348125196" duration="3459000" />
-      <workItem from="1579119056241" duration="251000" />
+      <workItem from="1579119056241" duration="780000" />
+      <workItem from="1579168500338" duration="3710000" />
     </task>
     <servers />
   </component>
@@ -194,59 +197,49 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="177" key="#Project_Structure" timestamp="1579171413940">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1579171413940" />
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1579171946888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579171946888" />
     <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579119061624">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579119061624" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579172218102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579172218102" />
+    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579172218102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579172218102" />
+    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579172218102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579172218102" />
+    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579172218102">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579172218102" />
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579172217998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579172217998" />
+    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579172217998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579172217998" />
+    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579172217998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579172217998" />
+    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579172217998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579172217998" />
   </component>
 </project>
