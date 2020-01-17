@@ -1,5 +1,8 @@
 package koschei.models;
 
+import org.springframework.stereotype.Component;
+
+
 public class Island2 {
 
     private Wood3 wood;
@@ -10,6 +13,6 @@ public class Island2 {
 
     @Override
     public String toString() {
-        return ", на острове дерево " + wood.toString();
+        return ", на том острове дуб стоит" + wood.toString();
     }
 }

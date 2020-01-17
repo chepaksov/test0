@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="36affe85-44ba-40d1-93db-75346841217e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/KoscheiTheDeathless.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/KoscheiTheDeathless.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/config/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Duck5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Duck5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Egg6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Egg6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Island2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Island2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Needle7.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Needle7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Ocean1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Ocean1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Rabbit4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Rabbit4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/koschei/models/Wood3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koschei/models/Wood3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/koschei/models/Wood3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/koschei/models/Wood3.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +143,9 @@
       <workItem from="1574420224747" duration="1094000" />
       <workItem from="1579184744165" duration="806000" />
       <workItem from="1579195417761" duration="970000" />
+      <workItem from="1579214270661" duration="94000" />
+      <workItem from="1579266133865" duration="354000" />
+      <workItem from="1579280818356" duration="5585000" />
     </task>
     <servers />
   </component>
@@ -140,42 +153,50 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579213065688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579213065688" />
     <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579184748917">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="408" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579184748917" />
-    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579206764916">
+    <state x="761" y="379" width="397" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1579283757222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764916" />
-    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579206764916">
+    <state x="761" y="379" width="397" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1579283757222" />
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579286407621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764916" />
-    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579206764916">
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407621" />
+    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579286407621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764916" />
-    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579206764916">
+    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407621" />
+    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579286407621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764916" />
-    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579206764808">
+    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407621" />
+    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579286407621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764808" />
-    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579206764808">
+    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407621" />
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579286407539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764808" />
-    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579206764808">
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407539" />
+    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579286407538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764808" />
-    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579206764808">
+    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407538" />
+    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579286407538">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579206764808" />
+    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407538" />
+    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579286407539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579286407539" />
   </component>
   <component name="masterDetails">
     <states>
