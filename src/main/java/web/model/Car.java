@@ -17,7 +17,8 @@ public class Car {
 
     }
 
-    public Car(String name, int series) {
+    public Car(Long id, String name, int series) {
+        this.id = id;
         this.name = name;
         this.series = series;
     }
