@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
@@ -19,13 +20,30 @@ public class UserDaoImp implements UserDao {
 
 
    @Override
-   public void add(Car car) {
+   public void add(User user, Car car) {
       sessionFactory.getCurrentSession().save(car);
+      sessionFactory.getCurrentSession().save(user);
    }
 
+
+
    @Override
-   public void add(User user) {
-      sessionFactory.getCurrentSession().save(user);
+   public User getUser(Car car) {
+      String hql = "FROM User where car.name = :name and car.series = :series";
+      Query query = sessionFactory.getCurrentSession().createQuery(hql);
+      String name = car.getName();
+      int series = car.getSeries();
+      query.setParameter("name", name);
+      query.setParameter("series", series);
+    //  query.setParameter("series", car.getSeries());
+     List <User> users = query.getResultList();
+      for (User s:users){
+         System.out.println(s.getId());
+         System.out.println(s.getLastName());
+         System.out.println(s.getFirstName());
+         System.out.println(s.getEmail());
+      }
+      return users.get(0);
    }
 
    @Override

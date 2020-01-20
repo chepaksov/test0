@@ -10,6 +10,8 @@ import javax.persistence.*;
 public class Car {
 
 
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,6 +32,16 @@ public class Car {
         this.name = name;
         this.series = series;
     }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
 
     public String getName() {
         return name;
