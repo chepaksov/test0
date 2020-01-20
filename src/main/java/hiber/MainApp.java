@@ -11,14 +11,15 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class MainApp {
-   public static void main(String[] args) throws SQLException {
-      AnnotationConfigApplicationContext context = 
-            new AnnotationConfigApplicationContext(AppConfig.class);
-      UserService userService = context.getBean(UserService.class);
+    public static void main(String[] args) throws SQLException {
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        UserService userService = context.getBean(UserService.class);
 
-   //  userService.add(new Car("14546", 123), new User("User5121231", "Lastname1", "user1@mail.ru"));
-     userService.add(new User("awd", "awdaw", "dawdaw"));
-     userService.add(new Car("14546", 123));
+        //  userService.add(new Car("14546", 123), new User("User5121231", "Lastname1", "user1@mail.ru"));
+       Car car0 = new Car("14546", 123);
+        userService.add(car0);
+        userService.add(new User("awd", "awdaw", "dawdaw", car0));
 
 
 /*
@@ -31,6 +32,6 @@ public class MainApp {
          System.out.println();
       }*/
 
-      context.close();
-   }
+        context.close();
+    }
 }

@@ -4,18 +4,23 @@ package hiber.model;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
-@Component
+
 @Entity
 @Table(name = "cars")
 public class Car {
 
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @Column(name = "name")
     private String name;
 
     @Column(name = "series")
     private int series;
+
+
 
     public Car() {
 
@@ -43,21 +48,11 @@ public class Car {
         this.series = series;
     }
 
-    @OneToOne(optional = false, cascade = CascadeType.ALL)
-    @JoinColumn(name="name",   unique = true, updatable = true, insertable = true)
 
 
 
 
-    public User user;
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
 
 
