@@ -4,7 +4,7 @@ package web.model;
 public class Car {
 
 
-    private Long id;
+    private int id;
 
 
     private String name;
@@ -17,18 +17,18 @@ public class Car {
 
     }
 
-    public Car(Long id, String name, int series) {
+    public Car(int id, String name, int series) {
         this.id = id;
         this.name = name;
         this.series = series;
     }
 
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
