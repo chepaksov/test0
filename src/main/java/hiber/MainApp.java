@@ -33,17 +33,26 @@ public class MainApp {
             System.out.println("Car_id = " + user.getCar().getId());
             System.out.println("Car_name = " + user.getCar().getName());
             System.out.println("Car_series = " + user.getCar().getSeries());
-            System.out.println("______________________________________");
+            System.out.println("______________________________________------------------");
         }
 
-     /*   User user = userService.getUser(car0);
+        User user = userService.getUser(car0);
         System.out.println(user.getId());
         System.out.println(user.getFirstName());
         System.out.println(user.getLastName());
         System.out.println(user.getEmail());
         System.out.println("____________________________________________");
 
-*/
+
+        User user0 = userService.getUser(car1);
+        System.out.println(user0.getId());
+        System.out.println(user0.getFirstName());
+        System.out.println(user0.getLastName());
+        System.out.println(user0.getEmail());
+        System.out.println("____________________________________________");
+
+
+
         context.close();
     }
 }

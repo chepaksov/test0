@@ -13,44 +13,35 @@ import java.util.List;
 @Repository
 public class UserDaoImp implements UserDao {
 
-   @Autowired
-   private SessionFactory sessionFactory;
+    @Autowired
+    private SessionFactory sessionFactory;
 
 
+    @Override
+    public void add(User user, Car car) {
+        sessionFactory.getCurrentSession().save(car);
+        sessionFactory.getCurrentSession().save(user);
+    }
 
 
-   @Override
-   public void add(User user, Car car) {
-      sessionFactory.getCurrentSession().save(car);
-      sessionFactory.getCurrentSession().save(user);
-   }
+    @Override
+    public User getUser(Car car) {
+        String hql = "FROM User where car.name = :name and car.series = :series";
+        Query query = sessionFactory.getCurrentSession().createQuery(hql);
+        String name = car.getName();
+        int series = car.getSeries();
+        query.setParameter("name", name);
+        query.setParameter("series", series);
+        //  query.setParameter("series", car.getSeries());
+        List<User> users = query.getResultList();
+        return users.get(0);
+    }
 
-
-
-   @Override
-   public User getUser(Car car) {
-      String hql = "FROM User where car.name = :name and car.series = :series";
-      Query query = sessionFactory.getCurrentSession().createQuery(hql);
-      String name = car.getName();
-      int series = car.getSeries();
-      query.setParameter("name", name);
-      query.setParameter("series", series);
-    //  query.setParameter("series", car.getSeries());
-     List <User> users = query.getResultList();
-      for (User s:users){
-         System.out.println(s.getId());
-         System.out.println(s.getLastName());
-         System.out.println(s.getFirstName());
-         System.out.println(s.getEmail());
-      }
-      return users.get(0);
-   }
-
-   @Override
-   @SuppressWarnings("unchecked")
-   public List<User> listUsers() {
-      TypedQuery<User> query=sessionFactory.getCurrentSession().createQuery("from User");
-      return query.getResultList();
-   }
+    @Override
+    @SuppressWarnings("unchecked")
+    public List<User> listUsers() {
+        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("from User");
+        return query.getResultList();
+    }
 
 }
