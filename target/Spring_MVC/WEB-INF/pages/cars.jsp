@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Title</title>
+    <a href="${pageContext.request.contextPath}?lang=en">Login (English)</a>
     <c:out value="${cars}"/>
 </head>
 <body>
