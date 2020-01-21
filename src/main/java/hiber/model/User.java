@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.*;
 
 
-
 @Entity
 @Table(name = "users")
 public class User {
@@ -35,7 +34,6 @@ public class User {
     public void setCar(Car car) {
         this.car = car;
     }
-
 
 
     public User() {
@@ -80,13 +78,6 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
-
-
-
-
-
 
 
 }

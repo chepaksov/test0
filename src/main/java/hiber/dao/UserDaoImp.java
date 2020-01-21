@@ -18,8 +18,8 @@ public class UserDaoImp implements UserDao {
 
 
     @Override
-    public void add(User user, Car car) {
-        sessionFactory.getCurrentSession().save(car);
+    public void add(User user) {
+        //sessionFactory.getCurrentSession().save(car);
         sessionFactory.getCurrentSession().save(user);
     }
 
@@ -33,8 +33,8 @@ public class UserDaoImp implements UserDao {
         query.setParameter("name", name);
         query.setParameter("series", series);
         //  query.setParameter("series", car.getSeries());
-        List<User> users = query.getResultList();
-        return users.get(0);
+        User users = (User) query.getSingleResult();
+        return users;
     }
 
     @Override

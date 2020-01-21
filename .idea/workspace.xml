@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="88812e5b-9964-466f-bfdd-47df47b70fa8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hiber/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hiber/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hiber/dao/UserDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hiber/dao/UserDaoImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hiber/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hiber/model/User.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,22 +30,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="111" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="111" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="111" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="spring_hiber: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="111" type="feb32156:DbDataSourceImpl" />
-        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -184,6 +173,7 @@
       <workItem from="1579515132661" duration="7833000" />
       <workItem from="1579541241057" duration="2075000" />
       <workItem from="1579607402909" duration="687000" />
+      <workItem from="1579610307223" duration="374000" />
     </task>
     <servers />
   </component>
@@ -231,42 +221,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579519578709" />
-    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579607468716">
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579610722806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468716" />
-    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579607468715">
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579610722806" />
+    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579610722806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
-    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579607468715">
+    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579610722806" />
+    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579610722806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
-    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579607468715">
+    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579610722806" />
+    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579610722806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
-    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579607468633">
+    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579610722806" />
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579610726787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
-    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579607468633">
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579610726787" />
+    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579610726786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
-    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579607468633">
+    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579610726786" />
+    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579610726786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
-    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579607468633">
+    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579610726786" />
+    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579610726786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
-    <state width="174" height="456" key="HiddenNamespacesPopup" timestamp="1579515332569">
+    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579610726786" />
+    <state width="174" height="456" key="HiddenNamespacesPopup" timestamp="1579610737178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="174" height="456" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1579515332569" />
+    <state width="174" height="456" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1579610737178" />
     <state x="440" y="93" key="SettingsEditor" timestamp="1579608079634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -287,6 +277,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="412" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1579353801766" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/test$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1579448719755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

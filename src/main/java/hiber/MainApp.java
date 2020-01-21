@@ -20,8 +20,8 @@ public class MainApp {
         Car car0 = new Car("14546", 123);
         Car car1 = new Car("asdfas", 1232154);
 
-        userService.add(new User("qwe", "sdgf", "bnm", car0), car0);
-        userService.add(new User("awd", "awdaw", "dawdaw", car1), car1);
+        userService.add(new User("qwe", "sdgf", "bnm", car0));
+        userService.add(new User("awd", "awdaw", "dawdaw", car1));
 
 
         List<User> users = userService.listUsers();
