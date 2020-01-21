@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: 1
@@ -10,11 +11,13 @@
 <html>
 <head>
     <title>Title</title>
-    <a href="${pageContext.request.contextPath}?lang=en">Login (English)</a>
-    <c:out value="${cars}"/>
 </head>
 <body>
 <forEach>
+    <a href="${pageContext.request.contextPath}?lang=en">English</a>
+    <br><a href="${pageContext.request.contextPath}?lang=ru">Russian</a>
+
+    <br><spring:message code="label.title"/>
 
 
     <table border="1" cellspacing="0" cellpadding="2">
@@ -31,9 +34,7 @@
             <td>${msg.series}</td>
         </tr>
 
-
         </c:forEach>
-
 
 </body>
 </html>

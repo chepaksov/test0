@@ -20,22 +20,16 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
-@PropertySource("classpath:db.properties")
 @EnableWebMvc
 @ComponentScan("web")
 public class WebConfig implements WebMvcConfigurer {
 
-    @Autowired
-    private Environment env;
 
     @Bean(name = "messageSource")
     public MessageSource getMessageResource() {
         ReloadableResourceBundleMessageSource messageResource = new ReloadableResourceBundleMessageSource();
 
-        // Read i18n/messages_xxx.properties file.
-        // For example: i18n/messages_en.properties
-
-        messageResource.setBasename("classpath:db.properties");
+        messageResource.setBasename("classpath:messages");
         messageResource.setDefaultEncoding("UTF-8");
         return messageResource;
     }
@@ -44,8 +38,6 @@ public class WebConfig implements WebMvcConfigurer {
     public LocaleResolver getLocaleResolver() {
         CookieLocaleResolver resolver = new CookieLocaleResolver();
         resolver.setCookieDomain("myAppLocaleCookie");
-        // 60 minutes
-
         resolver.setCookieMaxAge(60 * 60);
         return resolver;
     }
@@ -56,7 +48,7 @@ public class WebConfig implements WebMvcConfigurer {
         localeInterceptor.setParamName("lang");
 
 
-        registry.addInterceptor(localeInterceptor).addPathPatterns("/cars");
+        registry.addInterceptor(localeInterceptor).addPathPatterns("/*");
     }
 
 
