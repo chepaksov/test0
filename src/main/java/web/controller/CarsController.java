@@ -26,18 +26,21 @@ public class CarsController {
     @RequestMapping(value = "cars", method = RequestMethod.GET)
     public String printWelcome(HttpServletRequest request,
                                HttpServletResponse response, ModelMap model) {
-        String cars = null;
-        if (request.getQueryString().contains("en")) {
-            cars = "cars";
-        }
-        if (request.getQueryString().contains("ru")) {
-            cars = "Машины";
+
+
+        if (request.getQueryString() != null) {
+            if (request.getQueryString().contains("en")) {
+                model.addAttribute("cars", "cars");
+            }
+            if (request.getQueryString().contains("ru")) {
+                model.addAttribute("cars", "машины");
+            }
         }
 
         List<Car> messages = null;
         messages = new CarServiceImp().getUser();
         model.addAttribute("messages", messages);
-        model.addAttribute("cars", cars);
+        ;
         return "cars";
     }
 }
