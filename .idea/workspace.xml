@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88812e5b-9964-466f-bfdd-47df47b70fa8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_fastinfoset_FastInfoset_1_2_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_persistence_javax_persistence_api_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_1_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jvnet_staxex_stax_ex_1_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_0_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_9_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_10_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_24_0_GA.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_1_1_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring_hibernate.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring_hibernate.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hiber/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hiber/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hiber/dao/UserDaoImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hiber/dao/UserDaoImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/spring-hibernate-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/spring-hibernate-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +36,11 @@
         <item name="111" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="spring_hiber: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="111" type="feb32156:DbDataSourceImpl" />
+        <item name="collations" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -104,7 +81,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Hibernate OneToOne" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -206,6 +183,7 @@
       <workItem from="1579512070953" duration="1318000" />
       <workItem from="1579515132661" duration="7833000" />
       <workItem from="1579541241057" duration="2075000" />
+      <workItem from="1579607402909" duration="687000" />
     </task>
     <servers />
   </component>
@@ -225,10 +203,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1579465043219" />
-    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579542797353">
+    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579608088393">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579542797353" />
+    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579608088393" />
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1579517039696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,46 +231,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579519578709" />
-    <state width="1876" height="340" key="GridCell.Tab.0.bottom" timestamp="1579543211291">
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom" timestamp="1579607468716">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211291" />
-    <state width="1876" height="340" key="GridCell.Tab.0.center" timestamp="1579543211291">
+    <state width="1876" height="334" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468716" />
+    <state width="1876" height="334" key="GridCell.Tab.0.center" timestamp="1579607468715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211291" />
-    <state width="1876" height="340" key="GridCell.Tab.0.left" timestamp="1579543211291">
+    <state width="1876" height="334" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
+    <state width="1876" height="334" key="GridCell.Tab.0.left" timestamp="1579607468715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211291" />
-    <state width="1876" height="340" key="GridCell.Tab.0.right" timestamp="1579543211291">
+    <state width="1876" height="334" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
+    <state width="1876" height="334" key="GridCell.Tab.0.right" timestamp="1579607468715">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211291" />
-    <state width="1876" height="340" key="GridCell.Tab.1.bottom" timestamp="1579543211212">
+    <state width="1876" height="334" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468715" />
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom" timestamp="1579607468633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211212" />
-    <state width="1876" height="340" key="GridCell.Tab.1.center" timestamp="1579543211212">
+    <state width="1876" height="334" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
+    <state width="1876" height="334" key="GridCell.Tab.1.center" timestamp="1579607468633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211212" />
-    <state width="1876" height="340" key="GridCell.Tab.1.left" timestamp="1579543211212">
+    <state width="1876" height="334" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
+    <state width="1876" height="334" key="GridCell.Tab.1.left" timestamp="1579607468633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211212" />
-    <state width="1876" height="340" key="GridCell.Tab.1.right" timestamp="1579543211212">
+    <state width="1876" height="334" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
+    <state width="1876" height="334" key="GridCell.Tab.1.right" timestamp="1579607468633">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579543211212" />
+    <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579607468633" />
     <state width="174" height="456" key="HiddenNamespacesPopup" timestamp="1579515332569">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="174" height="456" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1579515332569" />
-    <state x="440" y="93" key="SettingsEditor" timestamp="1579360045684">
+    <state x="440" y="93" key="SettingsEditor" timestamp="1579608079634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579360045684" />
+    <state x="440" y="93" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579608079634" />
     <state x="681" y="250" width="540" height="524" key="StructurePopup" timestamp="1579442749108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
