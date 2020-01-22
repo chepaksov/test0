@@ -1,13 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="test:war exploded">
-    <output-path>$PROJECT_DIR$/target/Spring_MVC</output-path>
-    <properties id="maven-jee-properties">
-      <options>
-        <exploded>true</exploded>
-        <module>test</module>
-        <packaging>war</packaging>
-      </options>
-    </properties>
+    <output-path>$PROJECT_DIR$/out/artifacts/test_war_exploded</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -21,7 +14,6 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.0.1.RELEASE" />
@@ -48,9 +40,6 @@
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.18" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
         </element>
-      </element>
-      <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/Spring_MVC/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="test/web/Web" />
     </root>
