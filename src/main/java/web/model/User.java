@@ -30,6 +30,11 @@ public class User {
         this.series = series;
     }
 
+    public User(String name, int series) {
+        this.name = name;
+        this.series = series;
+    }
+
 
     public int getId() {
         return id;
