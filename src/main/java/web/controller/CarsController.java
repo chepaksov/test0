@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.server.WebSession;
-import web.model.Car;
-import web.service.CarServiceImp;
+
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +24,8 @@ public class CarsController {
 
     @RequestMapping(value = "cars", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-        List<Car> messages = new CarServiceImp().getUser();
-        model.addAttribute("messages", messages);
+     //   List<Car> messages = new CarServiceImp().getUser();
+      //  model.addAttribute("messages", messages);
         return "cars";
     }
 }
