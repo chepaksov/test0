@@ -25,8 +25,8 @@ public class CarsController {
 
     @RequestMapping(value = "cars", method = RequestMethod.GET)
     public String printWelcome(ModelMap model) {
-     //   List<Car> messages = new CarServiceImp().getUser();
-      //  model.addAttribute("messages", messages);
+        List messages = null;
+        model.addAttribute("messages", messages);
         return "cars";
     }
 }
