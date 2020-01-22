@@ -21,5 +21,7 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "hello";
 	}
+
+
 	
 }
