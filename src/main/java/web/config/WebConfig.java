@@ -24,6 +24,7 @@ import org.springframework.web.servlet.view.JstlView;
 @ComponentScan("web")
 public class WebConfig implements WebMvcConfigurer {
 
+    /*
 
     @Bean(name = "messageSource")
     public MessageSource getMessageResource() {
@@ -50,7 +51,7 @@ public class WebConfig implements WebMvcConfigurer {
 
         registry.addInterceptor(localeInterceptor).addPathPatterns("/*");
     }
-
+*/
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
