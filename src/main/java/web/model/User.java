@@ -1,7 +1,7 @@
 package web.model;
 
 
-public class Car {
+public class User {
 
 
     private int id;
@@ -13,11 +13,11 @@ public class Car {
     private int series;
 
 
-    public Car() {
+    public User() {
 
     }
 
-    public Car(int id, String name, int series) {
+    public User(int id, String name, int series) {
         this.id = id;
         this.name = name;
         this.series = series;

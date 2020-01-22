@@ -1,7 +1,7 @@
-package hiber.config;
+package web.config;
 
-import hiber.model.User;
-import hiber.model.Car;
+import web.model.User;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -59,4 +59,9 @@ public class AppConfig {
       transactionManager.setSessionFactory(getSessionFactory().getObject());
       return transactionManager;
    }
+
+
+   @Bean
+   public
+
 }
