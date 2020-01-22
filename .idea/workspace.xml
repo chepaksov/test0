@@ -289,9 +289,4 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/test$MainApp.ic" NAME="MainApp Coverage Results" MODIFIED="1579448719755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>hiber.*</FILTER>
-    </SUITE>
-  </component>
 </project>
