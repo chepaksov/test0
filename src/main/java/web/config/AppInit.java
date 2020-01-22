@@ -8,7 +8,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{
-                AppConfig.class
+                WebConfig.class
         };
     }
 
@@ -16,7 +16,7 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
     @Override
     protected Class<?>[] getServletConfigClasses() {
         return new Class<?>[]{
-                AppConfig.class
+                WebConfig.class
         };
     }
 

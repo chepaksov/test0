@@ -3,7 +3,7 @@ web\controller\HelloController.class
 web\dao\UserDaoImp.class
 web\config\AppConfig.class
 web\config\AppInit.class
+web\config\WebConfig.class
 web\dao\UserDao.class
-web\controller\CarsController.class
 web\model\User.class
 web\service\UserServiceImp.class

@@ -28,11 +28,11 @@ import java.util.Properties;
 
 
 @Configuration
-@EnableWebMvc
+
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
 @ComponentScan(value = "web")
-public class AppConfig implements WebMvcConfigurer{
+public class AppConfig{
 
    @Autowired
    private Environment env;
@@ -72,20 +72,7 @@ public class AppConfig implements WebMvcConfigurer{
    }
 
 
-   @Override
-   public void addResourceHandlers(ResourceHandlerRegistry registry) {
-      registry.addResourceHandler("/WEB-INF/pages/**").addResourceLocations("/pages/");
-   }
 
-   @Bean
-   public InternalResourceViewResolver setupViewResolver() {
-      InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-      resolver.setPrefix("/WEB-INF/pages/");
-      resolver.setSuffix(".jsp");
-      resolver.setViewClass(JstlView.class);
-
-      return resolver;
-   }
 
 }
 
