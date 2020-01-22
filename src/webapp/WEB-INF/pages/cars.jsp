@@ -17,9 +17,6 @@
     <a href="${pageContext.request.contextPath}?lang=en">English</a>
     <br><a href="${pageContext.request.contextPath}?lang=ru">Russian</a>
 
-    <br><spring:message code="label.title"/>
-
-
     <table border="1" cellspacing="0" cellpadding="2">
         <tr>
             <td>ID</td>
