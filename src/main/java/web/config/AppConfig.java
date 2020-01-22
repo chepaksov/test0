@@ -8,11 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -20,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "hiber")
+@ComponentScan(value = "web")
 public class AppConfig {
 
    @Autowired
@@ -47,7 +46,7 @@ public class AppConfig {
     //  props.put("hibernate.dialect", env.getProperty("hibernate.dialect"));
 
       factoryBean.setHibernateProperties(props);
-      factoryBean.setAnnotatedClasses(User.class, Car.class);
+      factoryBean.setAnnotatedClasses(User.class);
 
 
       return factoryBean;
@@ -62,6 +61,8 @@ public class AppConfig {
 
 
    @Bean
-   public
+   public EntityManager getEntity(){
+
+   }
 
 }

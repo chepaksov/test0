@@ -1,10 +1,10 @@
 package web.service;
 
 
-import web.model.Car;
+import web.model.User;
 import java.util.List;
 
-public interface CarService {
+public interface UserService {
     List<Car> getUser();
 
 }
