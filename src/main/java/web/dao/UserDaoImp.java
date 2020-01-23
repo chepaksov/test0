@@ -20,7 +20,7 @@ public class UserDaoImp implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
-    
+
 
     @Override
     public List<User> getUser() {
