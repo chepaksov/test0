@@ -57,7 +57,7 @@ public class HelloController {
 
 	@RequestMapping(value = "del", method = RequestMethod.GET)
 	public String printDel(User user) {
-		userService.delete(user);
+		userService.delete(user.getId());
 		return "redirect:/hello";
 
 	}

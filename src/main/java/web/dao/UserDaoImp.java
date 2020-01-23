@@ -20,32 +20,30 @@ public class UserDaoImp implements UserDao {
 
     @PersistenceContext
     private EntityManager entityManager;
-
-
-
- //   @Override
-  //  public void add(User user) {
-   //    sessionFactory.getCurrentSession().save(user);
-        
-  //  }
+    
 
     @Override
     public List<User> getUser() {
-       // SELECT  FROM pp06
+        // SELECT  FROM pp06
         return entityManager.createQuery("FROM User").getResultList();
 
     }
 
     @Override
     public void update(User user) {
-       entityManager.merge(user);
+        entityManager.merge(user);
     }
 
     @Override
-    public void delete(User user) {
-        entityManager.remove(entityManager.contains(user) ? user : entityManager.merge(user));
+    public void delete(int id) {
+      //  entityManager.remove(entityManager.contains(user) ? user : entityManager.merge(user));
 
-      //  entityManager.remove(user);
+          entityManager.remove(getUserById(id));
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return (User) entityManager.createQuery("FROM User where id=:id").setParameter("id", id).getSingleResult();
     }
 
 
