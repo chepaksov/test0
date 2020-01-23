@@ -13,8 +13,8 @@
 </head>
 <body>
 <form action="/edit" method="POST">
-    Id: <input type="text" name="id" value="${id}"/>
-    Name: <input type="text" name="name" value="${name}"/>
+    Id: <input type="text" name="id" value="${user.id}"/>
+    Name: <input type="text" name="name" value="${user.name}"/>
     Series: <input type="text" name="series"/>
     <input type="submit" value="Ok">
 </form>

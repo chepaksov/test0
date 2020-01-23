@@ -8,6 +8,8 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
@@ -16,23 +18,41 @@ import java.util.List;
 @Transactional
 public class UserDaoImp implements UserDao {
 
-    @Autowired
-    private SessionFactory sessionFactory;
+    @PersistenceContext
+    private EntityManager entityManager;
 
 
-    @Override
-    public void add(User user) {
-       sessionFactory.getCurrentSession().save(user);
+
+ //   @Override
+  //  public void add(User user) {
+   //    sessionFactory.getCurrentSession().save(user);
         
-    }
+  //  }
 
     @Override
     public List<User> getUser() {
-        return sessionFactory.getCurrentSession().createQuery("from User").list();
+       // SELECT  FROM pp06
+        return entityManager.createQuery("FROM User").getResultList();
+
     }
 
     @Override
     public void update(User user) {
-        sessionFactory.getCurrentSession().update(user);
+       entityManager.merge(user);
     }
+
+    @Override
+    public void delete(User user) {
+        entityManager.remove(entityManager.contains(user) ? user : entityManager.merge(user));
+
+      //  entityManager.remove(user);
+    }
+
+
+    @Override
+    public void add(User user) {
+        entityManager.persist(user);
+
+    }
+
 }

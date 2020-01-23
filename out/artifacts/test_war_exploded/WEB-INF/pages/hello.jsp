@@ -20,7 +20,7 @@
         <td>${msg.name}</td>
         <td>${msg.series}</td>
         <td><a href="/edit?name=${msg.name}&id=${msg.id}">Изменить</a></td>
-        <td><a href="/del?param1=${msg.name}">Удалить</a></td>
+        <td><a href="/del?name=${msg.name}&id=${msg.id}&series=${msg.series}">Удалить</a></td>
     </tr>
 
     </c:forEach>

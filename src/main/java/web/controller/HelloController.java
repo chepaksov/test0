@@ -43,7 +43,7 @@ public class HelloController {
 
 	@RequestMapping(value = "edit", method = RequestMethod.GET)
 	public String printEdit(Model model, User user) {
-		model.addAttribute("name", user.getName());
+		model.addAttribute("user", user);
 		return "edit";
 
 	}
@@ -54,6 +54,14 @@ public class HelloController {
 		return "redirect:/hello";
 
 	}
+
+	@RequestMapping(value = "del", method = RequestMethod.GET)
+	public String printDel(User user) {
+		userService.delete(user);
+		return "redirect:/hello";
+
+	}
+
 
 
 

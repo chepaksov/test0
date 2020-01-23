@@ -11,5 +11,6 @@ public interface UserDao {
     void add(User user);
     List<User> getUser();
     void update(User user);
+    void delete(User user);
 
 }
