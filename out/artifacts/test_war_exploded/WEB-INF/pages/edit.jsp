@@ -1,4 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core_1_1" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
   User: 1
@@ -12,10 +13,9 @@
     <title>Edit pp05</title>
 </head>
 <body>
-<form action="/admin/edit" method="POST">
-    name: <input type="text" name="name" value="${name}"/>
-    password: <input type="password" name="password"/>
-    role: <input type="text" name="role"/>
+<form action="/edit" method="POST">
+    Name: <input type="text" name="name" value="${name}"/>
+    Series: <input type="text" name="series"/>
     <input type="submit" value="Ok">
 </form>
 </body>
