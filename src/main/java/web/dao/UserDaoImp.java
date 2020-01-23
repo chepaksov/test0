@@ -24,7 +24,6 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public List<User> getUser() {
-        // SELECT  FROM pp06
         return entityManager.createQuery("FROM User").getResultList();
 
     }
