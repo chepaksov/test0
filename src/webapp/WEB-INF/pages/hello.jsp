@@ -12,9 +12,30 @@
 
 
 
-<c:forEach var="user" items="${users}">
-    <li>Id: <c:out value="${user.id}"/>, Name: <c:out value="${user.name}"/>, Password: <c:out value="${user.password}"/>, Role: <c:out value="${user.role}"/> || <a href="/admin/edit?param1=${user.name}">Изменить</a> <a href="/admin/del?param1=${user.name}">Удалить</a> </li>
-</c:forEach>
+
+
+<table border="1" cellspacing="0" cellpadding="2">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Series</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+
+    <c:forEach var="msg" items="${messages}">
+    <tr>
+        <td>${msg.id}</td>
+        <td>${msg.name}</td>
+        <td>${msg.series}</td>
+        <td><a href="/edit?name=${msg.name}">Изменить</a></td>
+        <td><a href="/del?param1=${msg.name}">Удалить</a></td>
+    </tr>
+
+    </c:forEach>
+
+
+
 
 </body>
 </html>

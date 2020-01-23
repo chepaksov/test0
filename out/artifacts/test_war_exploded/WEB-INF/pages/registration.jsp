@@ -16,21 +16,5 @@
     <input type="text" name="series" size="30">
     <input type="submit" value="ОK"/>
 </form>
-
-
-<%--@elvariable id="mans" type="antlr"--%>
-<form:form method="post" modelAttribute="mans">
-<table>
-    <tr>
-
-
-    </tr>
-    <td colspan="3"><input type="submit" value="Submit" /></td>
-    </tr>
-</table>
-</form:form>
-
-
-
 </body>
 </html>
