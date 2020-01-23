@@ -1,6 +1,7 @@
 package web.dao;
 
 
+import org.hibernate.Transaction;
 import web.model.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,13 @@ import java.util.List;
 @Repository
 public class UserDaoImp implements UserDao {
 
+    @Autowired
+    private SessionFactory sessionFactory;
 
 
-
-
-
+    @Override
+    public void add(User user) {
+        Transaction transaction = sessionFactory.getCurrentSession();
+        
+    }
 }

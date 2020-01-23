@@ -23,7 +23,7 @@
 <table>
     <tr>
 
-        <td><form:input path="name" /></td>
+
     </tr>
     <td colspan="3"><input type="submit" value="Submit" /></td>
     </tr>
