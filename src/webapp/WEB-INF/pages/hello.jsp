@@ -3,16 +3,7 @@
 <body>
 <%@ page contentType="text/html;charset=utf-8" %>
 
-
-
-
-    <h1><a href="/add">Create</a></h1>
-
-
-
-
-
-
+<h1><a href="/add">Create</a></h1>
 
 <table border="1" cellspacing="0" cellpadding="2">
     <tr>
@@ -28,13 +19,11 @@
         <td>${msg.id}</td>
         <td>${msg.name}</td>
         <td>${msg.series}</td>
-        <td><a href="/edit?name=${msg.name}">Изменить</a></td>
+        <td><a href="/edit?name=${msg.name}&id=${msg.id}">Изменить</a></td>
         <td><a href="/del?param1=${msg.name}">Удалить</a></td>
     </tr>
 
     </c:forEach>
-
-
 
 
 </body>

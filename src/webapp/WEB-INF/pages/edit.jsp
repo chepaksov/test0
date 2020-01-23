@@ -1,4 +1,3 @@
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%--
   Created by IntelliJ IDEA.
@@ -14,6 +13,7 @@
 </head>
 <body>
 <form action="/edit" method="POST">
+    Id: <input type="text" name="id" value="${id}"/>
     Name: <input type="text" name="name" value="${name}"/>
     Series: <input type="text" name="series"/>
     <input type="submit" value="Ok">
