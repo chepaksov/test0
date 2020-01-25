@@ -1,7 +1,8 @@
 package web.model;
 
 import javax.persistence.*;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 @Entity
@@ -13,26 +14,35 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "login")
+    private String login;
 
-    @Column(name = "series")
-    private int series;
+    @Column(name = "password")
+    private String password;
+
+
+
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "role_id")
+    private Set<Role> attachments = new HashSet<>();
+
+
+
 
 
     public User() {
 
     }
 
-    public User(int id, String name, int series) {
+    public User(int id, String login, String password) {
         this.id = id;
-        this.name = name;
-        this.series = series;
+        this.login = login;
+        this.password = password;
     }
 
-    public User(String name, int series) {
-        this.name = name;
-        this.series = series;
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
     }
 
 
@@ -45,21 +55,21 @@ public class User {
     }
 
 
-    public String getName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
 
-    public int getSeries() {
-        return series;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSeries(int series) {
-        this.series = series;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 

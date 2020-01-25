@@ -26,32 +26,6 @@ public class WebConfig implements WebMvcConfigurer {
 
 
 
-    @Bean(name = "messageSource")
-    public MessageSource getMessageResource() {
-        ReloadableResourceBundleMessageSource messageResource = new ReloadableResourceBundleMessageSource();
-
-        messageResource.setBasename("classpath:messages");
-        messageResource.setDefaultEncoding("UTF-8");
-        return messageResource;
-    }
-
-    @Bean(name = "localeResolver")
-    public LocaleResolver getLocaleResolver() {
-        CookieLocaleResolver resolver = new CookieLocaleResolver();
-        resolver.setCookieDomain("myAppLocaleCookie");
-        resolver.setCookieMaxAge(60 * 60);
-        return resolver;
-    }
-
-
-    public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
-        localeInterceptor.setParamName("lang");
-
-
-        registry.addInterceptor(localeInterceptor).addPathPatterns("/*");
-    }
-
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

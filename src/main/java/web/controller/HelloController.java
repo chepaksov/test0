@@ -27,6 +27,17 @@ public class HelloController {
 		return "hello";
 	}
 
+	@RequestMapping(value = "login", method = RequestMethod.GET)
+	public String printLogin(ModelMap model) {
+	//	List<User> messages = userService.getUser();
+	//	model.addAttribute("messages", messages);
+		return "login";
+	}
+
+
+
+
+
 
 	@RequestMapping(value = "add", method = RequestMethod.GET)
 	public String printAdd(ModelMap model) {
