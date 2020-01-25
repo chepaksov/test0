@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88812e5b-9964-466f-bfdd-47df47b70fa8" name="Default" comment="" />
+    <list default="true" id="88812e5b-9964-466f-bfdd-47df47b70fa8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +42,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1WbnnHWKHJSvyiK4tKHfKyqSv6E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -181,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="177" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1579465043219" />
-    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579608088393">
+    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579962339075">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579608088393" />
+    <state x="543" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579962339075" />
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1579517039696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -241,10 +247,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1876" height="334" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579611327558" />
-    <state width="174" height="456" key="HiddenNamespacesPopup" timestamp="1579610737178">
+    <state width="174" height="456" key="HiddenNamespacesPopup" timestamp="1579962230951">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="174" height="456" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1579610737178" />
+    <state width="174" height="456" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1579962230951" />
     <state x="440" y="93" key="SettingsEditor" timestamp="1579608079634">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
