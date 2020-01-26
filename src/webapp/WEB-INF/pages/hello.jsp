@@ -17,10 +17,10 @@
     <c:forEach var="msg" items="${messages}">
     <tr>
         <td>${msg.id}</td>
-        <td>${msg.name}</td>
-        <td>${msg.series}</td>
-        <td><a href="/edit?name=${msg.name}&id=${msg.id}">Изменить</a></td>
-        <td><a href="/del?name=${msg.name}&id=${msg.id}&series=${msg.series}">Удалить</a></td>
+        <td>${msg.username}</td>
+        <td>${msg.password}</td>
+        <td><a href="/edit?name=${msg.username}&id=${msg.id}">Изменить</a></td>
+        <td><a href="/del?username=${msg.username}&id=${msg.id}&password=${msg.password}">Удалить</a></td>
     </tr>
 
     </c:forEach>

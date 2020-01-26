@@ -32,8 +32,11 @@ public class UserServiceImp implements UserService {
     public void add(User user) {
 
         Role role = new Role();
+        Role role23 = new Role();
+        role23.setRole("ROLE_USER");
         role.setRole("ROLE_ADMIN");
         Set<Role> roleSet = new HashSet<>();
+      //  roleSet.add(role23);
         roleSet.add(role);
         user.setRole(roleSet);
         userDao.add(user);

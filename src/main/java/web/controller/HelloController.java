@@ -23,12 +23,6 @@ public class HelloController {
 	private UserService userService;
 
 
-	/*@PostMapping("/add")
-	public String userList(User user, Role role) {
-
-		userService.add(user);
-		return "redirect:/admin";
-	}*/
 
 
 
@@ -45,6 +39,8 @@ public class HelloController {
 	//	model.addAttribute("messages", messages);
 		return "login";
 	}
+
+
 
 
 
@@ -81,7 +77,7 @@ public class HelloController {
 	@RequestMapping(value = "del", method = RequestMethod.GET)
 	public String printDel(User user) {
 		userService.delete(user.getId());
-		return "redirect:/hello";
+		return "redirect:/admin";
 
 	}
 
