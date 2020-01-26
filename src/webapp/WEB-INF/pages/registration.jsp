@@ -11,12 +11,14 @@
 <form action="/add" method="POST">
     <h2>Create</h2>
     Логин:
-    <input type="text" name="name" size="30">
+    <input type="text" name="username" size="30">
     Пароль:
     <input type="text" name="password" size="30">
     Роль:
-    <input type="text" name="role" size="30">
+    <input type="text" name="role0" size="30">
     <input type="submit" value="ОK"/>
+
+
 </form>
 </body>
 </html>

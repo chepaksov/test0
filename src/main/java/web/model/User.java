@@ -1,30 +1,44 @@
 package web.model;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements UserDetails {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "login")
-    private String login;
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "password")
     private String password;
 
 
 
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "role_id")
-    private Set<Role> attachments = new HashSet<>();
+    private Set<Role> role = new HashSet<>();
+
+    public Set<Role> getRole() {
+        return role;
+    }
+
+    public void setRole(Set<Role> role) {
+        this.role = role;
+    }
+
 
 
 
@@ -34,15 +48,20 @@ public class User {
 
     }
 
-    public User(int id, String login, String password) {
+    public User(int id, String username, String password) {
         this.id = id;
-        this.login = login;
+        this.username = username;
         this.password = password;
     }
 
-    public User(String login, String password) {
-        this.login = login;
+    
+
+
+
+    public User(String username, String password, Set<Role> role) {
+        this.username = username;
         this.password = password;
+        this.role = role;
     }
 
 
@@ -55,14 +74,39 @@ public class User {
     }
 
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
     }
 
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return getRole();
+    }
 
     public String getPassword() {
         return password;
