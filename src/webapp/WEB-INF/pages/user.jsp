@@ -4,27 +4,25 @@
 <body>
 <%@ page contentType="text/html;charset=utf-8" %>
 
-<h1><a href="/add">Create</a></h1>
 
 <table border="1" cellspacing="0" cellpadding="2">
     <tr>
         <td>ID</td>
-        <td>Name</td>
-        <td>Series</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>Username</td>
+        <td>Password</td>
+        <td>Role</td>
+
     </tr>
 
-    <c:forEach var="msg" items="${messages}">
+
     <tr>
-        <td>${msg.id}</td>
-        <td>${msg.username}</td>
-        <td>${msg.password}</td>
-        <td><a href="/edit?name=${msg.username}&id=${msg.id}">Изменить</a></td>
-        <td><a href="/del?username=${msg.username}&id=${msg.id}&password=${msg.password}">Удалить</a></td>
+        <td>${messages.id}</td>
+        <td>${messages.username}</td>
+        <td>${messages.password}</td>
+        <td>${role}</td>
+
     </tr>
 
-    </c:forEach>
 
     <sec:authorize access="isAuthenticated()">
     <h4><a href="/logout">Выйти</a></h4>

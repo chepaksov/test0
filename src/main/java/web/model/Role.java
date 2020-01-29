@@ -2,8 +2,11 @@ package web.model;
 
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "roles")
@@ -19,15 +22,27 @@ public class Role implements GrantedAuthority {
     @Column(name = "role")
     private String role;
 
+
+    @ManyToMany(mappedBy = "roles")
+    private Set<User> users;
+/*
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
+*/
+
     public Role() {
 
     }
-
-    public Role(int id, String role){
-        this.id = id;
-        this.role = role;
-
+    public Role(String roleName) {
+        role = roleName;
     }
+
+
 
     public int getId() {
         return id;
@@ -48,6 +63,6 @@ public class Role implements GrantedAuthority {
 
     @Override
     public String getAuthority() {
-        return getRole();
+        return role;
     }
 }

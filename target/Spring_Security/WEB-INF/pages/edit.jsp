@@ -12,10 +12,10 @@
     <title>Edit pp05</title>
 </head>
 <body>
-<form action="/edit" method="POST">
+<form action="/admin/edit" method="POST">
     Id: <input type="text" name="id" value="${user.id}"/>
-    Name: <input type="text" name="name" value="${user.name}"/>
-    Series: <input type="text" name="series"/>
+    Login: <input type="text" name="username" value="${user.username}"/>
+    Password: <input type="text" name="password" value="${user.password}"/>
     <input type="submit" value="Ok">
 </form>
 </body>

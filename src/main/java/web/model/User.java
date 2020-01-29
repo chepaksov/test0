@@ -1,5 +1,6 @@
 package web.model;
 
+import com.sun.istack.NotNull;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,7 +16,6 @@ import java.util.Set;
 public class User implements UserDetails {
 
     @Id
-    @Column(name = "id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -26,23 +26,20 @@ public class User implements UserDetails {
     private String password;
 
 
-
-
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "role_id")
-    private Set<Role> role = new HashSet<>();
+    @ManyToMany (fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<Role> roles;
 
     public Set<Role> getRole() {
-        return role;
+        return roles;
     }
 
-    public void setRole(Set<Role> role) {
-        this.role = role;
+    public void setRole(Set<Role> roles) {
+
+        this.roles = roles;
     }
-
-
-
-
 
 
     public User() {
@@ -53,17 +50,10 @@ public class User implements UserDetails {
         this.id = id;
         this.username = username;
         this.password = password;
+
     }
 
-    
 
-
-
-    public User(String username, String password, Set<Role> role) {
-        this.username = username;
-        this.password = password;
-        this.role = role;
-    }
 
 
     public int getId() {

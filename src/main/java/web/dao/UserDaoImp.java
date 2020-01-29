@@ -1,6 +1,7 @@
 package web.dao;
 
 
+import com.sun.istack.NotNull;
 import org.hibernate.Transaction;
 import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
@@ -8,10 +9,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
 import java.util.List;
 
 @Repository
@@ -30,24 +28,31 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public void update(User user) {
-        entityManager.merge(user);
+        entityManager.createQuery("update User  set username = :username, password = :password where id =:id").setParameter("username", user.getUsername()).setParameter("password", user.getPassword()).setParameter("id", user.getId()).executeUpdate();
     }
 
     @Override
     public void delete(int id) {
-      //  entityManager.remove(entityManager.contains(user) ? user : entityManager.merge(user));
+        //  entityManager.remove(entityManager.contains(user) ? user : entityManager.merge(user));
 
-          entityManager.remove(getUserById(id));
+        entityManager.remove(getUserById(id));
     }
 
     @Override
     public User getUserById(int id) {
-        return (User) entityManager.createQuery("FROM User where id=:id").setParameter("id", id).getSingleResult();
+        return entityManager.find(User.class, id);
     }
 
     @Override
     public User findByUsername(String username) {
-        return (User) entityManager.createQuery("FROM User where username=:username").setParameter("username", username).getSingleResult();
+        //  entityManager.find(User.class, username);
+        try {
+            return (User) entityManager.createQuery("FROM User where username=:username").setParameter("username", username).getSingleResult();
+        } catch (NoResultException ex) {
+            return null;
+
+        }
+
     }
 
 

@@ -6,15 +6,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import web.dao.UserDao;
 import web.model.Role;
 import web.model.User;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -22,24 +20,20 @@ public class UserServiceImp implements UserService {
     @Autowired
     private UserDao userDao;
 
- //   @Autowired
- //   BCryptPasswordEncoder bCryptPasswordEncoder;
 
-
-
+    //   @Autowired
+    //   BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
-    public void add(User user) {
 
-        Role role = new Role();
-        Role role23 = new Role();
-        role23.setRole("ROLE_USER");
-        role.setRole("ROLE_ADMIN");
-        Set<Role> roleSet = new HashSet<>();
-      //  roleSet.add(role23);
-        roleSet.add(role);
-        user.setRole(roleSet);
-        userDao.add(user);
+    public boolean add(User user) {
+        if (userDao.findByUsername(user.getUsername()) == null) {
+
+            userDao.add(user);
+            return true;
+        }
+        return false;
+
     }
 
     @Override
@@ -55,6 +49,11 @@ public class UserServiceImp implements UserService {
     @Override
     public void delete(int id) {
         userDao.delete(id);
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        return userDao.findByUsername(username);
     }
 
 
