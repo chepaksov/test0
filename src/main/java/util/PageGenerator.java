@@ -11,6 +11,20 @@ import java.io.Writer;
 import java.util.Map;
 
 public class PageGenerator {
+
+
+
+
+    public static class PageGeneratorHolder {
+        public static final PageGenerator HOLDER_INSTANCE = new PageGenerator();
+    }
+
+    public static PageGenerator getInstance() {
+        return PageGeneratorHolder.HOLDER_INSTANCE;
+    }
+
+
+
     private static final String HTML_DIR = "templates";
 
     private final Configuration cfg;
@@ -27,7 +41,7 @@ public class PageGenerator {
         return stream.toString();
     }
 
-    public PageGenerator() {
+    private PageGenerator() {
         cfg = new Configuration();
     }
 }

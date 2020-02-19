@@ -1,18 +1,20 @@
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-import servlets.MainServlet;
-import servlets.Ms;
-
+import servlet.ApiServlet;
+import servlet.LoginServlet;
+import servlet.RegistrationServlet;
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        MainServlet mainServlet = new MainServlet();
-        Ms ms = new Ms();
+
+    public static void main(String[] args) throws Exception{
+        ApiServlet apiServlet = new ApiServlet();
 
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.addServlet(new ServletHolder(mainServlet), "/");
-        context.addServlet(new ServletHolder(ms), "/mult");
+
+        context.addServlet(ApiServlet.class, "/api/*");
+       context.addServlet(RegistrationServlet.class, "/register");
+       context.addServlet(LoginServlet.class, "/login");
+
 
         Server server = new Server(8080);
         server.setHandler(context);
