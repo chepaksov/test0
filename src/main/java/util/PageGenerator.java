@@ -12,23 +12,18 @@ import java.util.Map;
 
 public class PageGenerator {
 
-
-
-
-    public static class PageGeneratorHolder {
-        public static final PageGenerator HOLDER_INSTANCE = new PageGenerator();
-    }
-
-    public static PageGenerator getInstance() {
-        return PageGeneratorHolder.HOLDER_INSTANCE;
-    }
-
-
+    private static PageGenerator pageGenerator;
 
     private static final String HTML_DIR = "templates";
 
     private final Configuration cfg;
 
+    public static PageGenerator getInstance() {
+        if (pageGenerator == null) {
+            pageGenerator = new PageGenerator();
+        }
+        return pageGenerator;
+    }
 
     public String getPage(String filename, Map<String, Object> data) {
         Writer stream = new StringWriter();
@@ -41,7 +36,7 @@ public class PageGenerator {
         return stream.toString();
     }
 
-    private PageGenerator() {
+    public PageGenerator() {
         cfg = new Configuration();
     }
 }
