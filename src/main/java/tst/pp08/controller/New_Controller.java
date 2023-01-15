@@ -1,19 +1,14 @@
 package tst.pp08.controller;
 
 
-
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-import sun.net.www.http.HttpClient;
 import tst.pp08.model.Role;
 import tst.pp08.model.User;
 import tst.pp08.service.RoleService;
 import tst.pp08.service.UserService;
 
-
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
